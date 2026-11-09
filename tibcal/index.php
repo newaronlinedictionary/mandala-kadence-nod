@@ -12,7 +12,7 @@ function tibcal_shortcode() {
     */
 
     $pagepath = explode('?', $_SERVER['REQUEST_URI'])[0];
-    $imgpath = '/wp-content/themes/mandala-kadence/tibcal/tibletters/';
+    $imgpath = get_stylesheet_directory_uri() . '/tibcal/tibletters/';
     $animals_english = array("Hare","Dragon","Snake","Horse",
         "Sheep","Monkey","Bird","Dog","Pig","Rat","Ox","Tiger");
     $animals_phonetic = array("y&ouml;","druk","tr&uuml;","ta",

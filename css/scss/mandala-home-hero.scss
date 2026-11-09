@@ -1,0 +1,56 @@
+/**
+ * Home page hero title ("Newar Online Dictionary" Kadence heading in page content)
+ * with the kutakshar logo placed before it via ::before.
+ * The small header branding is hidden on the home page so the logo appears only here.
+ */
+body.home .site-branding {
+  display: none !important;
+}
+
+body.home .entry-content {
+  // Lets the @container rule below react to the width actually available to the title.
+  .kb-row-layout-wrap:has(h1) {
+    container-type: inline-size;
+  }
+
+  // Logo + title side by side, with tight spacing between wrapped lines.
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    line-height: 1.1;
+
+    strong {
+      min-width: 0;
+    }
+
+    &::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 0.95em;
+      height: 1.9em;
+      background: url("/wp-content/uploads/2026/01/nod-logo-white-trans-h300.png") center / contain no-repeat;
+    }
+  }
+
+  // When the title wraps ("Dictionary" on the 2nd line), stretch the logo over both lines.
+  // 1055px ~= the width at which the 8rem title no longer fits on one line.
+  @container (max-width: 1055px) {
+    h1 {
+      align-items: stretch;
+
+      // Shrink the title box to about its widest line ("Newar Online" = 6.39em) so the
+      // centred text sits next to the logo instead of leaving a gap. 7em leaves slack
+      // for fallback fonts so it doesn't break onto a third line.
+      strong {
+        max-width: 7em;
+      }
+
+      &::before {
+        width: 1.1em;
+        height: auto;
+      }
+    }
+  }
+}

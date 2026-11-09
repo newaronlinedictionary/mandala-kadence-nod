@@ -5,7 +5,7 @@
     display: inline-block;
     width: 50px;
     height: 30px;
-    background-image: url("/wp-content/themes/mandala-kadence/images/hamburger.svg") ;
+    background-image: url("../images/hamburger.svg") ;
     background-repeat: no-repeat;
 
     &:hover > div > ul {
@@ -343,6 +343,48 @@ div.mandala-message h5 {
 
 #wpPageSearch select#at-select {
   min-width: 155px;
+}
+
+/**
+ * Home page hero title ("Newar Online Dictionary" Kadence heading in page content)
+ * with the kutakshar logo placed before it via ::before.
+ * The small header branding is hidden on the home page so the logo appears only here.
+ */
+body.home .site-branding {
+  display: none !important;
+}
+
+body.home .entry-content .kb-row-layout-wrap:has(h1) {
+  container-type: inline-size;
+}
+body.home .entry-content h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  line-height: 1.1;
+}
+body.home .entry-content h1 strong {
+  min-width: 0;
+}
+body.home .entry-content h1::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.95em;
+  height: 1.9em;
+  background: url("/wp-content/uploads/2026/01/nod-logo-white-trans-h300.png") center/contain no-repeat;
+}
+@container (max-width: 1055px) {
+  body.home .entry-content h1 {
+    align-items: stretch;
+  }
+  body.home .entry-content h1 strong {
+    max-width: 7em;
+  }
+  body.home .entry-content h1::before {
+    width: 1.1em;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=mandala-kadence.css.map */
