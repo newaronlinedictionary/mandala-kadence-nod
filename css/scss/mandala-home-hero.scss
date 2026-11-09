@@ -7,6 +7,15 @@ body.home .site-branding {
   display: none !important;
 }
 
+// Mobile menu toggle: Kadence's default grey-blue is nearly invisible over the dark red hero.
+body.home .mobile-toggle-open-container .menu-toggle-open {
+  &,
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
 body.home .entry-content {
   // Lets the @container rule below react to the width actually available to the title.
   .kb-row-layout-wrap:has(h1) {

@@ -354,6 +354,10 @@ body.home .site-branding {
   display: none !important;
 }
 
+body.home .mobile-toggle-open-container .menu-toggle-open, body.home .mobile-toggle-open-container .menu-toggle-open:hover, body.home .mobile-toggle-open-container .menu-toggle-open:focus {
+  color: #fff;
+}
+
 body.home .entry-content .kb-row-layout-wrap:has(h1) {
   container-type: inline-size;
 }
