@@ -1,0 +1,20 @@
+/**
+ * Helper classes used inside page content (Project, Scholars pages).
+ * Moved from the Simple Custom CSS snippet "Nod General Css" (post 48).
+ * Dropped as unused: .warm-red, and the home search-form submit-button hider
+ * (.wp-block-kadence-advanced-form.home.search), which no longer matches anything.
+ */
+@import "colors";
+
+a.nod-link {
+  text-decoration-color: $nod-link-underline-orange !important;
+}
+
+p.bg-gradient {
+  background-image: linear-gradient(to bottom, transparent 0%, $nod-ut-blue 40%) !important;
+}
+
+.job-title {
+  margin-top: 0;
+  color: $nod-warm-red !important;
+}

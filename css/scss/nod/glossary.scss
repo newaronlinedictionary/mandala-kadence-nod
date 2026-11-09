@@ -1,0 +1,59 @@
+/**
+ * The embedded Mandala dictionary app (home, /glossary/ and term pages).
+ * Moved from the Simple Custom CSS snippet "Nod General Css" (post 48).
+ */
+@import "colors";
+
+#glossary {
+  #definitions {
+    height: 1800px;
+    overflow: scroll;
+  }
+
+  div.row:first-of-type h2.text-center {
+    margin: 6rem 0 !important;
+    font-size: 4rem;
+  }
+}
+
+// Letter chooser
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: $nod-warm-red !important;
+}
+
+.l-site__wrap a {
+  color: $nod-ut-blue;
+}
+
+// Glossary search box: input and button joined.
+div#glossary #glossnav .wrapper {
+  button.glossary-search-button {
+    border-radius: 0 4px 4px 0;
+    border: 2px solid #555;
+    border-left: none;
+    background-color: $nod-ut-blue;
+  }
+
+  input.gloss-search {
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+// All checkboxes on the site (including the dictionary chooser) use Secondary Blue.
+input[type="checkbox"] {
+  accent-color: $nod-secondary-blue !important;
+}
+
+// Term pages: push main column and right sidebar below the header.
+body.glossary {
+  div#l-content__main,
+  .l-content__rightsidebar {
+    margin-top: 7rem;
+  }
+}
+
+.sui-termDicts__content .newar {
+  font-size: 1.75rem;
+}

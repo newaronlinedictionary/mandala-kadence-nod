@@ -1,0 +1,91 @@
+/**
+ * Site header: height, logo, site title, main menu and the dictionary tree icon.
+ * Moved from the Simple Custom CSS snippet "Nod General Css" (post 48).
+ */
+@import "colors";
+
+header#masthead {
+  height: 85px;
+}
+
+.site-branding .custom-logo {
+  height: 75px;
+  width: auto;
+}
+
+.site-title-wrap .site-title {
+  width: 200px;
+}
+
+body.glossary .site-title-wrap .site-title:hover {
+  color: $nod-warm-red;
+}
+
+// Pages whose header sits over a hero image (home, project, scholars, ...).
+body.transparent-header {
+  .site-title {
+    color: white;
+  }
+
+  #masthead #primary-menu li a {
+    width: fit-content !important;
+    margin: 0 3rem !important;
+    padding: 0 !important;
+    color: white !important;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Pages with a plain header (glossary and term pages).
+body:not(.transparent-header) #masthead #primary-menu li a {
+  display: inline-block;
+  width: fit-content;
+  font-weight: bold;
+  color: $nod-ut-blue;
+
+  &:hover {
+    color: $nod-warm-red !important;
+    text-decoration: underline;
+  }
+}
+
+#masthead #primary-menu .current_page_item a {
+  color: $nod-warm-red !important;
+  padding: 2px 2rem 0 !important;
+  text-decoration: underline !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Dictionary tree icon. Its click handler is in the "Main Custom JS" snippet (post 76).
+div#basicAndBrowse {
+  height: unset;
+  visibility: hidden;
+}
+
+#mdl-toggle-wrap {
+  display: block;
+
+  a.toggle {
+    cursor: pointer;
+
+    &:hover {
+      color: $nod-warm-red !important;
+    }
+  }
+}
+
+body.glossary #mdl-toggle-wrap a.toggle,
+body.non-transparent-header #mdl-toggle-wrap a.toggle {
+  color: $nod-ut-blue !important;
+
+  &:hover {
+    color: $nod-warm-red !important;
+  }
+}

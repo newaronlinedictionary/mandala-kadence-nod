@@ -1,0 +1,58 @@
+/**
+ * Full-width content area and footer layout.
+ * Moved from the Simple Custom CSS snippet "Nod General Css" (post 48).
+ */
+@import "colors";
+
+// Let pages run full width (drop Kadence's container margins / max-width).
+div#primary {
+  margin: 0;
+
+  .site-container {
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+  }
+}
+
+// Footer: centred widget and menu.
+.site-footer-middle-section-1 .footer-widget-area-inner section {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.site-footer-middle-section-2 {
+  .menu-footer-menu-container {
+    width: fit-content;
+    margin: 1rem auto;
+  }
+
+  #menu-footer-menu li {
+    line-height: 1.5;
+
+    a {
+      display: inline-block;
+      width: fit-content;
+      font-weight: bold;
+      color: $nod-ut-blue;
+
+      &:hover {
+        text-decoration: underline;
+        color: $nod-warm-red;
+      }
+    }
+  }
+}
+
+// Footer bottom row: 4-column grid, smaller centred text in the middle two columns.
+.site-footer-middle-section-3 section .kt-row-column-wrap.kt-has-4-columns {
+  grid-template-columns: 0.5fr 1.25fr 1.25fr 0.5fr;
+  column-gap: 1rem;
+  padding: 0;
+
+  .wp-block-kadence-column:nth-of-type(2),
+  .wp-block-kadence-column:nth-of-type(3) {
+    margin: auto 0;
+    font-size: 13px;
+  }
+}
