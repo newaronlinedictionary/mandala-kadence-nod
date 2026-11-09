@@ -387,4 +387,37 @@ body.home .entry-content h1::before {
   }
 }
 
+/**
+ * Smaller screens: shorter hero and smaller title, in three steps.
+ * Selectors are made specific enough to beat Kadence's per-block rules
+ * (min-height 500px on the row, font-size 8rem / padding-top 50px on the heading).
+ */
+@media (max-width: 768px) {
+  body.home .entry-content .kb-row-layout-wrap:has(h1) > .kt-row-column-wrap {
+    min-height: 340px;
+  }
+  body.home .entry-content h1.wp-block-kadence-advancedheading[data-kb-block] {
+    font-size: 6.4rem;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 640px) {
+  body.home .entry-content .kb-row-layout-wrap:has(h1) > .kt-row-column-wrap {
+    min-height: 280px;
+  }
+  body.home .entry-content h1.wp-block-kadence-advancedheading[data-kb-block] {
+    font-size: 5.2rem;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 440px) {
+  body.home .entry-content .kb-row-layout-wrap:has(h1) > .kt-row-column-wrap {
+    min-height: 220px;
+  }
+  body.home .entry-content h1.wp-block-kadence-advancedheading[data-kb-block] {
+    font-size: 3.6rem;
+    padding-top: 30px;
+  }
+}
+
 /*# sourceMappingURL=mandala-kadence.css.map */
