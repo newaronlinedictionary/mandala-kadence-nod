@@ -11,7 +11,7 @@
   }
 
   div.row:first-of-type h2.text-center {
-    margin: 6rem 0 !important;
+    margin: 3rem 0 !important; // was 6rem; halved 2026-11-10
     font-size: 4rem;
   }
 }

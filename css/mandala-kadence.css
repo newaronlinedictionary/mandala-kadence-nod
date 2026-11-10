@@ -374,20 +374,13 @@ body.home .entry-content h1 strong {
 body.home .entry-content h1::before {
   content: "";
   flex: 0 0 auto;
-  width: 0.95em;
-  height: 1.9em;
+  width: 1.14em;
+  height: 2.28em;
   background: url("/wp-content/uploads/2026/01/nod-logo-white-trans-h300.png") center/contain no-repeat;
 }
 @container (max-width: 1055px) {
-  body.home .entry-content h1 {
-    align-items: stretch;
-  }
   body.home .entry-content h1 strong {
     max-width: 7em;
-  }
-  body.home .entry-content h1::before {
-    width: 1.1em;
-    height: auto;
   }
 }
 
@@ -558,7 +551,7 @@ div#primary .site-container {
   overflow: scroll;
 }
 #glossary div.row:first-of-type h2.text-center {
-  margin: 6rem 0 !important;
+  margin: 3rem 0 !important;
   font-size: 4rem;
 }
 

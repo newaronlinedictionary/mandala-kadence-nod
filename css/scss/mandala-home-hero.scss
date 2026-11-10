@@ -34,31 +34,27 @@ body.home .entry-content {
       min-width: 0;
     }
 
+    // Logo is 20% larger than the original 0.95em x 1.9em. It scales with the title's
+    // font-size, so it shrinks at the breakpoints below.
     &::before {
       content: "";
       flex: 0 0 auto;
-      width: 0.95em;
-      height: 1.9em;
+      width: 1.14em;
+      height: 2.28em;
       background: url("/wp-content/uploads/2026/01/nod-logo-white-trans-h300.png") center / contain no-repeat;
     }
   }
 
-  // When the title wraps ("Dictionary" on the 2nd line), stretch the logo over both lines.
+  // When the title wraps ("Dictionary" on the 2nd line), the logo keeps its size and
+  // stays vertically centred on the two lines.
   // 1055px ~= the width at which the 8rem title no longer fits on one line.
   @container (max-width: 1055px) {
     h1 {
-      align-items: stretch;
-
       // Shrink the title box to about its widest line ("Newar Online" = 6.39em) so the
       // centred text sits next to the logo instead of leaving a gap. 7em leaves slack
       // for fallback fonts so it doesn't break onto a third line.
       strong {
         max-width: 7em;
-      }
-
-      &::before {
-        width: 1.1em;
-        height: auto;
       }
     }
   }
