@@ -11,8 +11,10 @@
   }
 
   div.row:first-of-type h2.text-center {
-    margin: 3rem 0 !important; // was 6rem; halved 2026-11-10
+    // Top only: the React "Browse" link under the title sets the gap below.
+    margin: 1.5rem 0 0 !important;
     font-size: 4rem;
+    line-height: 1.1;
   }
 }
 
