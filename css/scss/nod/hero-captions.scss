@@ -1,0 +1,18 @@
+// Caption under a hero (Kadence row with a background image).
+// Markup comes from inc/hero-captions.php; text is the image's Media Library caption.
+// Sizes in px: the site's root font size is 10px, so rem would come out too small.
+// Doubled class beats the theme's .entry-content > * margin rules.
+.nod-hero-caption.nod-hero-caption {
+    margin: 6px 0 0;
+    padding: 0 16px;
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

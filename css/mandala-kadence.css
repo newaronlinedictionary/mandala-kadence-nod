@@ -608,4 +608,18 @@ p.bg-gradient {
   color: #dc4633 !important;
 }
 
+.nod-hero-caption.nod-hero-caption {
+  margin: 6px 0 0;
+  padding: 0 16px;
+  text-align: right;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+.nod-hero-caption.nod-hero-caption a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=mandala-kadence.css.map */
