@@ -122,16 +122,18 @@ class MandalaKadence {
 		foreach($cssfiles as $n => $cssfile) {
 			// error_log(get_stylesheet_directory_uri() . "/css/custom/$cssfile");
 			wp_enqueue_style( 'mandala-kadence-custom-styles-' . $n,  get_stylesheet_directory_uri() . "/css/custom/$cssfile",
-				false,'1.0','all');
+				false, (string) filemtime( "$custom_folder/$cssfile" ), 'all');
 		}
 	}
 
     public function enqueue_mandala_scripts() {
         // Reigster styles and scripts for Mandala Kadence theme
+        // Version by file modification time so a theme update busts browser/proxy caches.
+        $dir = get_stylesheet_directory();
         wp_enqueue_style( 'mandala-kadence-styles', get_stylesheet_directory_uri() . '/css/mandala-kadence.css',
-            false,'1.0','all');
+            false, (string) filemtime( $dir . '/css/mandala-kadence.css' ), 'all');
         wp_enqueue_script( 'mandala-kadence-scripts', get_stylesheet_directory_uri() . '/js/mandala-kadence.js',
-            array ( 'jquery' ), 1.0, true);
+            array ( 'jquery' ), (string) filemtime( $dir . '/js/mandala-kadence.js' ), true);
     }
 
 	/**
