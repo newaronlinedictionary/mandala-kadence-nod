@@ -2,9 +2,11 @@
 // Markup comes from inc/hero-captions.php; text is the image's Media Library caption.
 // Sizes in px: the site's root font size is 10px, so rem would come out too small.
 // Doubled class beats the theme's .entry-content > * margin rules.
+$nod-hero-caption-band-grey: #f0f0f0; // matches the grey Kadence band rows under the Project/Scholars/Sources heroes
+
 .nod-hero-caption.nod-hero-caption {
-    margin: 6px 0 0;
-    padding: 0 16px;
+    margin: 0;
+    padding: 6px 16px 0;
     text-align: right;
     font-style: italic;
     font-size: 14px;
@@ -14,5 +16,11 @@
     a {
         color: inherit;
         text-decoration: underline;
+    }
+
+    // When the next section is a grey band, carry its grey up under the caption
+    // so there's no white strip between hero and band (Home has no band, stays plain).
+    &:has(+ .kb-row-layout-wrap.kt-row-has-bg) {
+        background-color: $nod-hero-caption-band-grey;
     }
 }

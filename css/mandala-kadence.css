@@ -609,8 +609,8 @@ p.bg-gradient {
 }
 
 .nod-hero-caption.nod-hero-caption {
-  margin: 6px 0 0;
-  padding: 0 16px;
+  margin: 0;
+  padding: 6px 16px 0;
   text-align: right;
   font-style: italic;
   font-size: 14px;
@@ -620,6 +620,9 @@ p.bg-gradient {
 .nod-hero-caption.nod-hero-caption a {
   color: inherit;
   text-decoration: underline;
+}
+.nod-hero-caption.nod-hero-caption:has(+ .kb-row-layout-wrap.kt-row-has-bg) {
+  background-color: #f0f0f0;
 }
 
 /*# sourceMappingURL=mandala-kadence.css.map */
